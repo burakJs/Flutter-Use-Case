@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use_case/core/init/main_build.dart';
-
-import 'example/network_change_example.dart';
+import 'package:flutter_use_case/use_case/textfield_without_controller/login_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Material App',
       builder: MainBuild.build,
-      home: NetworkChangeView(),
+      home: LoginView(),
     );
   }
 }

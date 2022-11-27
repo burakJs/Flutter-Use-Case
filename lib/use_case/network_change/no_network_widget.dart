@@ -24,6 +24,12 @@ class _NoNetworkWidgetState extends State<NoNetworkWidget> with StateMixin {
     });
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    _networkChange.dispose();
+  }
+
   void fetchFirstResult() {
     waitForScreen(() async {
       final NetworkResult result = await _networkChange.checkNetworkFirstTime();
