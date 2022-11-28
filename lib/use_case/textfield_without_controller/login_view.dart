@@ -20,8 +20,6 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> with LoginController {
-  String _value = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,9 +33,7 @@ class _LoginViewState extends State<LoginView> with LoginController {
       ),
       body: _CustomTextField(
         action: _clearTextAction,
-        onChange: (String value) {
-          _value = value;
-        },
+        onChange: (String value) {},
       ),
     );
   }

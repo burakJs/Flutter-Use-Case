@@ -47,7 +47,7 @@ class _NoNetworkWidgetState extends State<NoNetworkWidget> with StateMixin {
   Widget build(BuildContext context) {
     return AnimatedCrossFade(
       duration: context.durationLow,
-      crossFadeState: _networkResult == NetworkResult.off ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+      crossFadeState: _networkResult == NetworkResult.on ? CrossFadeState.showFirst : CrossFadeState.showSecond,
       firstChild: Container(height: context.dynamicHeight(0.1), color: context.colorScheme.onSurface),
       secondChild: const SizedBox.shrink(),
     );
